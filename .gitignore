@@ -1,0 +1,44 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+*.log
+
+# Archivos de configuración
+*.class
+*.jar
+*.war
+*.ear
+
+# Archivos de pruebas
+/test-classes/
+
+# Archivos temporales
+*.swp
+*~.swp
+
+# Configuración del sistema
+*.vscode/
+.idea/
+
+# Ignorar el archivo de configuración de IntelliJ para evitar problemas de configuración global
+.idea/.idea_modules/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries/
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
