@@ -1,9 +1,7 @@
 package com.example.smarttaskmanager.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -24,4 +22,14 @@ public class Task {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
+
+    public User getUser() {
+        return user;
+    }
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+
+
 }

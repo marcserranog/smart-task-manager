@@ -4,20 +4,24 @@ import com.example.smarttaskmanager.model.Task;
 import com.example.smarttaskmanager.model.User;
 import com.example.smarttaskmanager.service.TaskService;
 import com.example.smarttaskmanager.service.UserService;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/tasks")
-@RequiredArgsConstructor
 public class TaskController {
 
     private final TaskService taskService;
     private final UserService userService;
+
+    @Autowired
+    public TaskController(TaskService taskService, UserService userService) {
+        this.taskService = taskService;
+        this.userService = userService;
+    }
 
     @PostMapping("/{userId}")
     public ResponseEntity<Task> createTask(@PathVariable Long userId, @RequestBody Task task) {
